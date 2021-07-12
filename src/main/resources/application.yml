@@ -1,0 +1,32 @@
+micronaut:
+  application:
+    name: micronautKotlinMicroservice
+  security:
+    authentication: bearer
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator:
+              secret: '"${JWT_GENERATOR_SIGNATURE_SECRET:pleaseChangeThisSecretForANewOne}"'
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: ''
+vertx:
+  pg:
+    client:
+      port: 5432
+      host: the-host
+      database: microservice
+      user: postgres
+      password: root
+      maxSize: 5
+r2dbc:
+  datasources:
+    default:
+      url: r2dbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: ''
