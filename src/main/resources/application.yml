@@ -37,3 +37,11 @@ flyway:
   datasources: 
     default: 
       enabled: true
+      url: r2dbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: postgres
+
+endpoints:
+  flyway:
+    enabled: true 
+    sensitive: false 
