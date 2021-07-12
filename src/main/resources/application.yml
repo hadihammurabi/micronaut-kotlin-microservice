@@ -1,6 +1,8 @@
 micronaut:
   application:
     name: micronautKotlinMicroservice
+  server:
+    port: 8080
   security:
     authentication: bearer
     token:
@@ -27,6 +29,8 @@ vertx:
 r2dbc:
   datasources:
     default:
-      url: r2dbc:postgresql://localhost:5432/postgres
-      username: postgres
-      password: ''
+
+flyway:
+  datasources: 
+    default: 
+      enabled: true
